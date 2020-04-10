@@ -34,4 +34,4 @@ app.use(routes)
 app.use(express.urlencoded({ extended: true })) // Permite envio de arquivos
 app.use('/files', express.static(resolve(__dirname, '..', 'tmp')))
 
-server.listen(3333)
+server.listen(process.env.PORT || 3333)
